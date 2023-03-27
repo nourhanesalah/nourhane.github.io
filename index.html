@@ -1,149 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <!-- Begin Jekyll SEO tag v2.8.0 -->
-    <title>
-      Your awesome title | Write an awesome description for your new site here.
-      You can edit this line in _config.yml. It will appear in your document
-      head meta (for Google search results) and in your feed.xml site
-      description.
-    </title>
-    <meta name="generator" content="Jekyll v3.9.3" />
-    <meta property="og:title" content="Your awesome title" />
-    <meta property="og:locale" content="en_US" />
-    <meta
-      name="description"
-      content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description."
-    />
-    <meta
-      property="og:description"
-      content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description."
-    />
-    <link rel="canonical" href="http://localhost:4000/" />
-    <meta property="og:url" content="http://localhost:4000/" />
-    <meta property="og:site_name" content="Your awesome title" />
-    <meta property="og:type" content="website" />
-    <meta name="twitter:card" content="summary" />
-    <meta property="twitter:title" content="Your awesome title" />
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "WebSite",
-        "description": "Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.",
-        "headline": "Your awesome title",
-        "name": "Your awesome title",
-        "url": "http://localhost:4000/"
-      }
-    </script>
-    <!-- End Jekyll SEO tag -->
-    <link rel="stylesheet" href="/assets/main.css" />
-    <link
-      type="application/atom+xml"
-      rel="alternate"
-      href="http://localhost:4000/feed.xml"
-      title="Your awesome title"
-    />
+    <title>Apollo</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Jade website template">
+    <meta name="keywords" content="apollo, jade, template, html, sass, jquery">
+    <meta name="author" content="Bucky Maler">
+    <link rel="stylesheet" href="assets/css/main.css">
   </head>
   <body>
-    <header class="site-header" role="banner">
+    <section id="hero"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 163.5" style="enable-background:new 0 0 100 163.5;" xml:space="preserve">
+<g transform="translate(0.000000,749.000000) scale(0.100000,-0.100000)">
+	<path d="M352.5,7487.4C351.4,7484.3,0,5858.4,0,5856.4c0-0.7,74-0.9,164.1-0.7l164.3,0.7l31.6,174.6l31.6,174.6h106.9h106.9l24.4-127.7c13.5-70.3,28.6-149.1,33.6-175l9.2-47.6h163.5H1000l-1.1,4.8c-2.8,11.1-350.7,1626.1-350.7,1627.9c0,1.1-61.1,2-147.3,2C384.8,7490,353.1,7489.3,352.5,7487.4z M542.3,6713.5c22.3-163.5,40.4-298.8,40.4-300.5c0-2.8-10.7-3.3-84-3.3h-84.2l1.3,7.2c2.2,12.7,84,590.8,84,593.4C499.8,7022.7,507,6971.7,542.3,6713.5z"/>
+</g>
+</svg>
+      <header>
+        <div class="nav-toggle">
+          <p>Menu</p><span></span>
+        </div>
+        <ul class="nav">
+          <li><a href="#about">About</a></li>
+          <li><a href="#full-slide">Work</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </header>
       <div class="wrapper">
-        <a class="site-title" rel="author" href="/">Your awesome title</a>
-        <nav class="site-nav">
-          <input type="checkbox" id="nav-trigger" class="nav-trigger" />
-          <label for="nav-trigger">
-            <span class="menu-icon">
-              <svg viewBox="0 0 18 15" width="18px" height="15px">
-                <path
-                  d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"
-                />
-              </svg>
-            </span>
-          </label>
-
-          <div class="trigger">
-            <a class="page-link" href="/about/">About</a>
-          </div>
-        </nav>
+        <div class="welcome">
+          <h1><strong>Apollo</strong> Jade Template</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex.</p>
+        </div>
+        <div class="photographer"><img src="assets/img/hero.png" alt="Photographer"></div>
       </div>
-    </header>
-    <main class="page-content" aria-label="Content">
+    </section>
+    <section id="about"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 203.6" style="enable-background:new 0 0 100 203.6;" xml:space="preserve">
+<g transform="translate(0.000000,749.000000) scale(0.100000,-0.100000)">
+	<path d="M0,6471.9V5454.2h206.5h206.5v436.2v436.2h7.6c19.8,0.3,107.9,5.7,128.3,8.2c90.2,10.9,154.9,29.4,220.4,62.8c141.1,72.6,213.3,213.3,228.3,444.1c8.7,135.3-7.3,272.3-42.9,368.3c-48.6,130.5-131,212.8-253.8,253.8c-15.5,5.2-43.5,12.8-62.2,17.1l-34,7.3l-302.2,0.8L0,7490V6471.9z M490.5,7190.8c51.1-13.6,71.2-28.8,92.9-69.8c22.3-41.9,26.4-81.5,24.7-243.2l-1.4-115l-8.4-32.1c-10.9-40.5-13.6-45.4-35.6-67.9c-21.2-22-30.7-27.4-60.6-34.5c-18.8-4.3-68.2-10.9-82.6-10.9c-3.3,0-3.8,44-3.8,291.1v291.3l26.6-1.6C456.8,7197.3,478.6,7194,490.5,7190.8z"/>
+</g>
+</svg>
       <div class="wrapper">
-        <div class="home">
-          <h2 class="post-list-heading">Poooooost</h2>
-          <ul class="post-list">
-            <li>
-              <span class="post-meta">Mar 27, 2023</span>
-              <h3>
-                <a
-                  class="post-link"
-                  href="/jekyll/update/2023/03/27/welcome-to-jekyll.html"
-                >
-                  Welcome to Jekyll!
-                </a>
-              </h3>
-            </li>
-          </ul>
-
-          <p class="rss-subscribe">subscribe <a href="/feed.xml">via RSS</a></p>
+        <div class="camera"><img src="assets/img/camera.png" alt="Camera"></div>
+        <div class="blurb">
+          <h2>My name is <strong>Apollo</strong></h2>
+          <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.<br><br>Ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
+          <div class="social"><a href="#"><i class="icon-facebook"></i></a><a href="#"><i class="icon-instagram"></i></a><a href="#"><i class="icon-twitter"></i></a><a href="#"><i class="icon-pinterest-p"></i></a></div>
         </div>
       </div>
-    </main>
-    <footer class="site-footer h-card">
-      <data class="u-url" href="/"></data>
-
+    </section>
+    <section id="full-slide"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 171.2" style="enable-background:new 0 0 100 171.2;" xml:space="preserve">
+<g transform="translate(0.000000,750.000000) scale(0.100000,-0.100000)">
+	<path d="M253.7,7486.3c-151.6-74.7-233.3-224.4-251.4-460.9c-3.2-41.5-3-726.7,0-763.9c7.5-86.3,21.9-155.7,44.5-213.7c51.4-130.6,124.4-207.8,239.3-253.2l17.8-6.8l197.9,0.5l197.9,0.7l22.8,10c98.4,42.7,167.6,112.8,214.8,217.1c34.2,75.6,52.5,154.8,60.3,260.3c3.2,42,3,700.9,0,743.1c-8.2,113.2-29.2,200.4-66,276.2c-44.1,90.4-104.6,151.6-190.9,193.4l-22.8,11H499.8H281.5L253.7,7486.3zM541.1,7263.7c52.3-15.8,85.6-58.7,101.8-131.3c11.4-51.6,11.2-43.8,11.2-488.6c0-384-0.2-418.7-3.9-444.3c-9.8-68.3-28.5-112.8-59.4-141.8c-24-22.4-52.5-32.6-92-32.6c-35.2,0-57.5,6.8-82.2,25.8c-40.9,30.8-63.2,89-69.9,182c-1.6,21.7-2.1,171.2-1.6,434.9c0.9,362.1,1.4,404.1,4.8,425.1c7.1,43.4,21,89,34.2,112.6c16.4,28.8,49.5,52.7,83.8,60.5C486.3,7270.1,523.3,7269,541.1,7263.7z"/>
+</g>
+</svg>
+      <ul class="banner">
+        <li class="active"></li>
+        <li></li>
+        <li></li>
+      </ul><i class="icon-chevron-thin-left prev"></i><i class="icon-chevron-thin-right next"></i>
+    </section>
+    <section id="featured"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 248.8" style="enable-background:new 0 0 100 248.8;" xml:space="preserve">
+<g transform="translate(0.000000,749.000000) scale(0.100000,-0.100000)">
+	<path d="M0,6245.8V5001.6h500h500V5176v174.4H752.5H505v1069.8V7490H252.5H0V6245.8z"/>
+</g>
+</svg>
       <div class="wrapper">
-        <h2 class="footer-heading">Your awesome title</h2>
-
-        <div class="footer-col-wrapper">
-          <div class="footer-col footer-col-1">
-            <ul class="contact-list">
-              <li class="p-name">Your awesome title</li>
-              <li>
-                <a class="u-email" href="mailto:your-email@example.com"
-                  >your-email@example.com</a
-                >
-              </li>
-            </ul>
-          </div>
-
-          <div class="footer-col footer-col-2">
-            <ul class="social-media-list">
-              <li>
-                <a href="https://github.com/jekyll"
-                  ><svg class="svg-icon">
-                    <use
-                      xlink:href="/assets/minima-social-icons.svg#github"
-                    ></use>
-                  </svg>
-                  <span class="username">jekyll</span></a
-                >
-              </li>
-              <li>
-                <a href="https://www.twitter.com/jekyllrb"
-                  ><svg class="svg-icon">
-                    <use
-                      xlink:href="/assets/minima-social-icons.svg#twitter"
-                    ></use>
-                  </svg>
-                  <span class="username">jekyllrb</span></a
-                >
-              </li>
-            </ul>
-          </div>
-
-          <div class="footer-col footer-col-3">
-            <p>
-              Write an awesome description for your new site here. You can edit
-              this line in _config.yml. It will appear in your document head
-              meta (for Google search results) and in your feed.xml site
-              description.
-            </p>
-          </div>
+        <div class="blurb">
+          <h2><strong>Ut enim</strong> ad minim</h2>
+          <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
         </div>
+        <div class="featured"><img src="assets/img/featured.jpg" alt="Featured"></div>
       </div>
-    </footer>
+    </section>
+    <section id="three-slide"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 248.8" style="enable-background:new 0 0 100 248.8;" xml:space="preserve">
+<g transform="translate(0.000000,749.000000) scale(0.100000,-0.100000)">
+	<path d="M0,6245.8V5001.6h500h500V5176v174.4H752.5H505v1069.8V7490H252.5H0V6245.8z"/>
+</g>
+</svg>
+      <div class="wrapper">
+        <ul class="slider">
+          <li class="back"><img src="assets/img/three-slide/thumb-1.jpg"></li>
+          <li class="current"><img src="assets/img/three-slide/thumb-2.jpg"></li>
+          <li class="front"><img src="assets/img/three-slide/thumb-3.jpg"></li>
+          <li><img src="assets/img/three-slide/thumb-4.jpg"></li>
+        </ul>
+      </div><i class="icon-chevron-thin-left prev"></i><i class="icon-chevron-thin-right next"></i>
+    </section>
+    <section id="contact"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 171.2" style="enable-background:new 0 0 100 171.2;" xml:space="preserve">
+<g transform="translate(0.000000,750.000000) scale(0.100000,-0.100000)">
+	<path d="M253.7,7486.3c-151.6-74.7-233.3-224.4-251.4-460.9c-3.2-41.5-3-726.7,0-763.9c7.5-86.3,21.9-155.7,44.5-213.7c51.4-130.6,124.4-207.8,239.3-253.2l17.8-6.8l197.9,0.5l197.9,0.7l22.8,10c98.4,42.7,167.6,112.8,214.8,217.1c34.2,75.6,52.5,154.8,60.3,260.3c3.2,42,3,700.9,0,743.1c-8.2,113.2-29.2,200.4-66,276.2c-44.1,90.4-104.6,151.6-190.9,193.4l-22.8,11H499.8H281.5L253.7,7486.3zM541.1,7263.7c52.3-15.8,85.6-58.7,101.8-131.3c11.4-51.6,11.2-43.8,11.2-488.6c0-384-0.2-418.7-3.9-444.3c-9.8-68.3-28.5-112.8-59.4-141.8c-24-22.4-52.5-32.6-92-32.6c-35.2,0-57.5,6.8-82.2,25.8c-40.9,30.8-63.2,89-69.9,182c-1.6,21.7-2.1,171.2-1.6,434.9c0.9,362.1,1.4,404.1,4.8,425.1c7.1,43.4,21,89,34.2,112.6c16.4,28.8,49.5,52.7,83.8,60.5C486.3,7270.1,523.3,7269,541.1,7263.7z"/>
+</g>
+</svg>
+      <div class="wrapper">
+        <div class="blurb">
+          <h2><strong>Say</strong> Hello</h2>
+          <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+        </div>
+        <form>
+          <input type="email" placeholder="Your Email">
+          <input type="text" placeholder="Subject">
+          <textarea placeholder="Message"></textarea>
+          <input type="submit" value="Send Message">
+        </form>
+      </div>
+      <p class="copyright">&copy; Apollo 2016</p>
+    </section>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="assets/js/vendor/jquery-2.2.4.min.js"><\/script>')</script>
+    <script src="assets/js/functions-min.js"></script>
   </body>
 </html>
