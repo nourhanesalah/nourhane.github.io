@@ -1,16 +1,18 @@
-@import "https://fonts.googleapis.com/css?family=Raleway:100,400,700";
-@import "https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap";
 @import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css";
 
-@font-face {
-  font-family: 'LMRomanSlant10';
-  src: url("fonts/lmromanslant10-regular-webfont.eot");
-  src: url("fonts/lmromanslant10-regular-webfont.eot?#iefix") format("embedded-opentype"),
-       url("fonts/lmromanslant10-regular-webfont.woff") format("woff"),
-       url("fonts/lmromanslant10-regular-webfont.ttf") format("truetype"),
-       url("fonts/lmromanslant10-regular-webfont.svg#latin_modern_roman_slante10Rg") format("svg");
-  font-weight: normal;
-  font-style: normal;
+/* Modern color variables */
+:root {
+  --primary-color: #2C2C2C;
+  --secondary-color: #6D72C3;
+  --accent-color: #6D72C3;
+  --text-color: #121212;
+  --light-text: #4A4A4A;
+  --bg-color: #F9F9F9;
+  --card-bg: #ffffff;
+  --border-color: #E5E5E5;
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+  --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  --font-primary: -apple-system, "SF Pro Display", "SF Pro Text", system-ui, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
 }
 
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
@@ -22,27 +24,15 @@ html {
 
 body {
   margin: 0;
-  background-color: #f8f9fa;
+  background-color: var(--bg-color);
   font-size: 16px;
   line-height: 1.6;
-  font-family: "Inter", sans-serif;
-  color: #333;
+  font-family: var(--font-primary);
+  color: var(--text-color);
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
   -webkit-text-size-adjust: 100%;
-}
-
-/* Modern color variables */
-:root {
-  --primary-color: #6c5ce7;
-  --secondary-color: #a29bfe;
-  --accent-color: #fd79a8;
-  --text-color: #2d3436;
-  --light-text: #636e72;
-  --bg-color: #f8f9fa;
-  --card-bg: #ffffff;
-  --border-color: #dfe6e9;
-  --shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-  --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
 @media (max-width: 415px) {
@@ -77,6 +67,7 @@ body {
   color: var(--text-color);
   font-weight: 600;
   letter-spacing: -0.02em;
+  font-family: var(--font-primary);
 }
 
 .gigantic {
@@ -227,7 +218,7 @@ svg path {
   padding: 12px 0;
   color: var(--text-color);
   font-size: 14px;
-  font-family: "Inter", sans-serif;
+  font-family: var(--font-primary);
   font-weight: 500;
   text-transform: uppercase;
   text-decoration: none;
@@ -235,7 +226,7 @@ svg path {
 }
 
 .nav li a:hover {
-  background-color: var(--primary-color);
+  background-color: var(--secondary-color);
   color: white;
 }
 
@@ -247,7 +238,7 @@ svg path {
   height: 600px;
   margin: 30px auto;
   background-color: var(--card-bg);
-  border-radius: 16px;
+  border-radius: 24px;
   box-shadow: var(--shadow);
   overflow: hidden;
   transition: var(--transition);
@@ -288,7 +279,7 @@ svg path {
 #hero header .nav-toggle p {
   margin-bottom: 0;
   font-size: 14px;
-  font-family: "Inter", sans-serif;
+  font-family: var(--font-primary);
   font-weight: 500;
   text-transform: uppercase;
   color: var(--text-color);
@@ -330,41 +321,30 @@ svg path {
 #hero .wrapper .welcome h1 {
   margin-top: 0;
   margin-bottom: 30px;
-  font-size: 42px;
-  font-family: "Inter", sans-serif;
+  font-size: 64px;
+  line-height: 1.1;
+  font-family: var(--font-primary);
   font-weight: 700;
-  color: var(--text-color);
-}
-
-#hero .wrapper .welcome h1 strong {
-  color: var(--primary-color);
-}
-
-@media (max-width: 640px) {
-  #hero .wrapper .welcome h1 {
-    margin-bottom: 20px;
-    font-size: 30px;
-  }
+  background: linear-gradient(120deg, var(--text-color), var(--primary-color));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: fadeInUp 0.8s ease-out;
 }
 
 #hero .wrapper .welcome p {
   max-width: 450px;
   margin-bottom: 30px;
-  font-size: 18px;
+  font-size: 20px;
   line-height: 1.6;
-}
-
-@media (max-width: 1180px) {
-  #hero .wrapper .welcome p {
-    margin-bottom: 0;
-  }
+  color: var(--light-text);
+  animation: fadeInUp 0.8s ease-out 0.2s backwards;
 }
 
 #hero .wrapper .photographer {
   width: 55%;
   align-self: flex-end;
   line-height: 0;
-  border-radius: 8px;
+  border-radius: 16px;
   overflow: hidden;
   box-shadow: var(--shadow);
 }
@@ -379,23 +359,53 @@ svg path {
   transform: scale(1.02);
 }
 
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 @media (max-width: 1023px) {
   #hero .wrapper .welcome {
-    display: flex;
     width: 100%;
-    flex-direction: column;
-    align-items: flex-end;
-    text-align: right;
+    text-align: center;
+    padding: 0 40px;
   }
+
+  #hero .wrapper .welcome h1 {
+    font-size: 48px;
+  }
+
+  #hero .wrapper .welcome p {
+    margin: 0 auto 30px;
+  }
+
   #hero .wrapper .photographer {
     display: none;
   }
 }
 
 @media (max-width: 640px) {
+  #hero {
+    margin: 15px auto;
+  }
+
   #hero .wrapper .welcome {
-    align-items: center;
-    text-align: center;
+    padding: 0 20px;
+  }
+
+  #hero .wrapper .welcome h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+
+  #hero .wrapper .welcome p {
+    font-size: 18px;
   }
 }
 
@@ -459,7 +469,7 @@ svg path {
   margin-top: 0;
   margin-bottom: 30px;
   font-size: 42px;
-  font-family: "Inter", sans-serif;
+  font-family: var(--font-primary);
   font-weight: 700;
   color: var(--text-color);
 }
@@ -513,6 +523,7 @@ svg path {
   height: 40px;
   font-size: 18px;
   background-color: var(--primary-color);
+  color: white;
   border-radius: 50%;
   transition: var(--transition);
 }
@@ -618,7 +629,7 @@ svg path {
   font-size: 28px;
   text-align: center;
   line-height: 60px;
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(255, 255, 255, 0.95);
   color: var(--primary-color);
   border-radius: 50%;
   cursor: pointer;
@@ -708,19 +719,11 @@ svg path {
   padding: 0 20px;
 }
 
-#featured .wrapper .blurb:after {
-  content: "";
-  display: inline-block;
-  width: 1px;
-  height: 70px;
-  background-color: var(--border-color);
-}
-
 #featured .wrapper .blurb h2 {
   margin-top: 0;
   margin-bottom: 30px;
   font-size: 42px;
-  font-family: "Inter", sans-serif;
+  font-family: var(--font-primary);
   font-weight: 700;
   color: var(--text-color);
 }
@@ -766,9 +769,6 @@ svg path {
     flex-direction: column;
     align-items: flex-end;
     text-align: right;
-  }
-  #featured .wrapper .blurb:after {
-    display: none;
   }
   #featured .wrapper .blurb p {
     margin-bottom: 0;
@@ -856,11 +856,11 @@ svg path {
 
 #three-slide .wrapper .slider li img {
   width: 100%;
-  transition: var(--transition);
+  transition: transform 0.4s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
 #three-slide .wrapper .slider li:hover img {
-  transform: scale(1.05);
+  transform: scale(1.03);
 }
 
 #three-slide .wrapper .slider .back {
@@ -901,7 +901,7 @@ svg path {
   font-size: 28px;
   text-align: center;
   line-height: 60px;
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(255, 255, 255, 0.95);
   color: var(--primary-color);
   border-radius: 50%;
   cursor: pointer;
@@ -957,30 +957,50 @@ svg path {
   bottom: 0;
   left: 0;
   right: 0;
-  background: rgba(0, 0, 0, 0.8);
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0));
   color: white;
-  padding: 20px;
+  padding: 40px 20px 20px;
   opacity: 0;
-  transition: opacity 0.3s ease;
-  backdrop-filter: blur(5px);
+  transform: translateY(20px);
+  transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.slider li {
+  position: relative;
+  overflow: hidden;
 }
 
 .slider li:hover .project-info {
   opacity: 1;
+  transform: translateY(0);
 }
 
 .project-info h3 {
   margin: 0 0 10px 0;
-  font-size: 1.2em;
-  font-weight: 600;
+  font-size: 1.3em;
+  font-weight: 500;
   color: white;
+  transform: translateY(10px);
+  opacity: 0;
+  transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1) 0.1s;
 }
 
 .project-info p {
   margin: 0;
-  font-size: 0.9em;
-  line-height: 1.4;
-  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.95em;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.9);
+  transform: translateY(10px);
+  opacity: 0;
+  transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1) 0.2s;
+}
+
+.slider li:hover .project-info h3,
+.slider li:hover .project-info p {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* Contact Section */
@@ -1030,7 +1050,7 @@ svg path {
   margin-top: 0;
   margin-bottom: 30px;
   font-size: 42px;
-  font-family: "Inter", sans-serif;
+  font-family: var(--font-primary);
   font-weight: 700;
   color: var(--text-color);
 }
@@ -1059,17 +1079,36 @@ svg path {
 
 .contact-info .email {
   display: inline-block;
-  font-size: 1.2em;
-  color: var(--primary-color);
-  text-decoration: none;
-  margin-bottom: 20px;
-  transition: var(--transition);
+  font-size: 24px;
   font-weight: 500;
+  color: var(--text-color);
+  text-decoration: none;
+  margin-bottom: 30px;
+  transition: var(--transition);
+  position: relative;
+  padding-bottom: 4px;
+}
+
+.contact-info .email:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--accent-color);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.4s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
 .contact-info .email:hover {
-  color: var(--secondary-color);
-  transform: translateY(-2px);
+  color: var(--accent-color);
+}
+
+.contact-info .email:hover:after {
+  transform: scaleX(1);
+  transform-origin: left;
 }
 
 .contact-info .social {
@@ -1085,21 +1124,26 @@ svg path {
   justify-content: center;
   width: 50px;
   height: 50px;
-  background-color: var(--primary-color);
-  color: #fff;
+  background-color: var(--text-color);
+  color: var(--bg-color);
   border-radius: 50%;
   transition: var(--transition);
-  box-shadow: var(--shadow);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .contact-info .social a:hover {
-  transform: translateY(-5px);
-  background-color: var(--secondary-color);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  transform: translateY(-5px) rotate(8deg);
+  background-color: var(--accent-color);
+  box-shadow: 0 8px 16px rgba(59, 130, 246, 0.2);
 }
 
 .contact-info .social i {
-  font-size: 1.4em;
+  font-size: 22px;
+  transition: var(--transition);
+}
+
+.contact-info .social a:hover i {
+  transform: scale(1.1);
 }
 
 /* Form Styles */
@@ -1110,7 +1154,7 @@ svg path {
   flex-wrap: wrap;
   justify-content: space-between;
   color: var(--text-color);
-  font-family: "Inter", sans-serif;
+  font-family: var(--font-primary);
 }
 
 #contact .wrapper form input[type="email"],
@@ -1185,7 +1229,127 @@ svg path {
   left: 50%;
   transform: translate(-50%);
   margin-bottom: 0;
-  font-family: "Inter", sans-serif;
+  font-family: var(--font-primary);
   font-size: 12px;
   color: var(--light-text);
+}
+
+#projects {
+  padding: 100px 0;
+  background-color: var(--background);
+}
+
+#projects .wrapper {
+  width: 1440px;
+  max-width: 95%;
+  margin: 0 auto;
+}
+
+#projects .blurb {
+  max-width: 800px;
+  margin: 0 auto 60px;
+  text-align: center;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.project-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+}
+
+.project-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.project-item a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.project-item img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.project-item:hover img {
+  transform: scale(1.05);
+}
+
+.project-item .project-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.2));
+  color: white;
+  padding: 1.5rem;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+}
+
+.project-item:hover .project-info {
+  transform: translateY(0);
+}
+
+.project-info h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.25rem;
+  color: white;
+}
+
+.project-info p {
+  margin: 0 0 1rem;
+  font-size: 0.9rem;
+  opacity: 0.9;
+  color: #fff;
+}
+
+.project-info .view-project {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--accent-color);
+  background: rgba(255, 255, 255, 0.1);
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: background 0.3s ease;
+}
+
+.project-info .view-project:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+@media (max-width: 768px) {
+  .project-grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+    padding: 1.5rem;
+  }
+
+  .project-item .project-info {
+    transform: translateY(0);
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.4));
+  }
+
+  .project-info h3 {
+    font-size: 1.1rem;
+  }
+
+  .project-info p {
+    font-size: 0.85rem;
+  }
 }
