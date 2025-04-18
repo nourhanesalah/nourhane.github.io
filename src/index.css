@@ -1,0 +1,40 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@layer base {
+  html {
+    font-family: "Inter var", system-ui, sans-serif;
+    @apply bg-nude-50;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "Playfair Display", serif;
+  }
+}
+
+@layer components {
+  .page-container {
+    @apply container mx-auto px-4 sm:px-6 lg:px-8 py-8;
+  }
+
+  .nav-link {
+    @apply text-nude-800 hover:text-nude-600 transition-colors duration-200 font-medium;
+  }
+
+  .portfolio-grid {
+    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6;
+  }
+
+  .portfolio-item {
+    @apply bg-white rounded-lg shadow-sm overflow-hidden transition-transform duration-300 hover:scale-[1.02];
+  }
+
+  .social-icon {
+    @apply text-nude-600 hover:text-nude-800 transition-colors duration-200 font-medium;
+  }
+
+  .btn-primary {
+    @apply inline-block bg-nude-800 text-white px-8 py-3 rounded-lg hover:bg-nude-700 transition-colors duration-200;
+  }
+}
