@@ -1,7 +1,18 @@
-import { motion } from 'framer-motion'
-import { Link, Outlet } from 'react-router-dom'
+import { motion } from 'framer-motion';
+import { JSX, useState } from 'react';
+import { Link, Outlet } from 'react-router-dom';
 
-function Layout() {
+const navigationItems = [
+  { path: '/', label: 'Home' },
+  { path: '/portfolio/branding', label: 'Branding' },
+  { path: '/portfolio/ux-ui', label: 'UX/UI' },
+  { path: '/portfolio/illustration', label: 'Illustration' },
+  { path: '/about', label: 'About' },
+];
+
+function Layout(): JSX.Element {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
   return (
     <div className="min-h-screen flex flex-col bg-nude-50">
       <header className="bg-white shadow-sm sticky top-0 z-50">
@@ -13,18 +24,44 @@ function Layout() {
             Nourhane Attia
           </Link>
           <div className="hidden md:flex gap-8">
-            <Link to="/" className="nav-link">Home</Link>
-            <Link to="/portfolio/branding" className="nav-link">Branding</Link>
-            <Link to="/portfolio/ux-ui" className="nav-link">UX/UI</Link>
-            <Link to="/portfolio/illustration" className="nav-link">Illustration</Link>
-            <Link to="/about" className="nav-link">About</Link>
+            {navigationItems.map((item) => (
+              <Link key={item.path} to={item.path} className="nav-link">
+                {item.label}
+              </Link>
+            ))}
           </div>
-          <button className="md:hidden">
+          <button
+            className="md:hidden"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            aria-label="Toggle mobile menu"
+          >
             <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-nude-800" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
             </svg>
           </button>
         </nav>
+
+        {/* Mobile Menu */}
+        <motion.div
+          className={`md:hidden absolute top-full left-0 right-0 shadow-lg ${isMobileMenuOpen ? 'block' : 'hidden'}`}
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -20 }}
+          transition={{ type: "spring", stiffness: 300, damping: 30 }}
+        >
+          <div className="px-4 py-3 space-y-3 bg-white border-t border-nude-200">
+            {navigationItems.map((item) => (
+              <Link
+                key={item.path}
+                to={item.path}
+                className="block nav-link"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                {item.label}
+              </Link>
+            ))}
+          </div>
+        </motion.div>
       </header>
 
       <main className="flex-grow">
